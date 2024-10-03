@@ -9,34 +9,11 @@ void main() {
   ));
 }
 
-class Profile extends StatefulWidget {
-  @override
-  _ProfileState createState() => _ProfileState();
-}
+class Profile extends StatelessWidget {
 
-class _ProfileState extends State<Profile> {
-  int counter = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            counter = counter + 1;
-          });
-        },
-        shape: CircleBorder(),
-        child: Container(
-          width: 60,
-          height: 60,
-          child: Icon(Icons.add),
-          decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: LinearGradient(
-                colors: [Colors.deepPurple.shade800, Colors.deepPurpleAccent],
-              )),
-        ),
-      ),
       body: Stack(
         children: [
           Column(
@@ -222,7 +199,7 @@ class _ProfileState extends State<Profile> {
                           height: 5.0,
                         ),
                         Text(
-                          "$counter",
+                          "12",
                           style: TextStyle(
                             fontSize: 15.0,
                           ),
